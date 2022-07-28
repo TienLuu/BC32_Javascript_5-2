@@ -130,6 +130,11 @@ function calcTotalPrice() {
    let premiumChannel = +document.getElementById("premiumChannel").value;
    let countConection = +document.getElementById("countConection").value;
 
+   if (!usernumber) {
+      showInfo("showTotalPrice", "<p>Vui lòng nhập thông tin KH!</p>");
+      return;
+   }
+
    if (
       premiumChannel * countConection < 0 ||
       premiumChannel < 0 ||
