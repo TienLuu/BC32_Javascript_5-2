@@ -26,18 +26,53 @@
             </div>
             <div class="form-group">
                 <label for="">Tổng thu nhập:</label>
-                <input type="text" name="" id="totalSalary" class="form-control" placeholder="Nhập tổng thu nhập"
+                <input type="text" name="" id="annualIncome" class="form-control" placeholder="Nhập tổng thu nhập"
                     aria-describedby="helpId">
             </div>
             <div class="form-group">
                 <label for="">Số người phụ thuộc:</label>
-                <input type="text" name="" id="countUser" class="form-control" placeholder="Nhập số người phụ thuộc"
-                    aria-describedby="helpId">
+                <input type="text" name="" id="whoDependOnTaxpayers" class="form-control"
+                    placeholder="Nhập số người phụ thuộc" aria-describedby="helpId">
             </div>
             <button type="button" class="btn btn-success" onclick="calcTax()">Tính Thuế</button>
         </div>
         <div class="card-footer text-muted" id="showTax">
-            Footer
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- TÍNH TIỀN CÁP -->
+    <div class="card">
+        <div class="card-header">
+            Tính Tiền Cáp
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">Mã KH:</label>
+                <input type="text" name="" id="usernumber" class="form-control" placeholder="Nhập mã KH"
+                    aria-describedby="helpId">
+            </div>
+            <div class="form-group">
+                <label for="">Loại KH</label>
+                <select class="form-control" name="" id="userType" onchange="showInputConection()">
+                    <option value="A">Nhà Dân</option>
+                    <option value="B">Doanh Nghiệp</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="">Số kênh cao cấp:</label>
+                <input type="text" name="" id="premiumChannel" class="form-control" placeholder="Nhập số kênh cao cấp"
+                    aria-describedby="helpId">
+            </div>
+            <div class="form-group">
+                <label for="">Số Kết nối:</label>
+                <input type="text" name="" id="countConection" class="form-control" placeholder="Nhập số kết nối"
+                    aria-describedby="helpId" disabled>
+            </div>
+            <button type="button" class="btn btn-success" onclick="calcTotalPrice()">Tính Thuế</button>
+        </div>
+        <div class="card-footer text-muted" id="showTotalPrice">
         </div>
     </div>
 
